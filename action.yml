@@ -1,0 +1,34 @@
+name: StageHook
+description: 'Helper Action to allow pre and post scripts for composite actions'
+
+inputs:
+  pre-cmd:
+    description: 'Command to run before the main action'
+    required: false
+    default: ''
+  pre-args:
+    description: 'Arguments for the pre command'
+    required: false
+    default: ''
+  post-cmd:
+    description: 'Command to run after the main action'
+    required: false
+    default: ''
+  post-args:
+    description: 'Arguments for the post command'
+    required: false
+    default: ''
+  main-cmd:
+    description: 'Command to run as the main action'
+    required: false
+    default: ''
+  main-args:
+    description: 'Arguments for the main command'
+    required: false
+    default: ''
+
+runs:
+  using: node16
+  main: action.js
+  pre: action.js
+  post: action.js
